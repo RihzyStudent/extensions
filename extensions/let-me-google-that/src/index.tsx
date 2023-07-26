@@ -25,7 +25,7 @@ export default function Command(props: { arguments?: { generate?: string } }) {
       return;
     }
     showToast({ title: "Copied Link:", message: `"${searchQuery}"` });
-    Clipboard.copy(`http://letmegooglethat.com/?q=${searchQuery}`);
+      Clipboard.copy('http://letmegooglethat.com/?q=\"${searchQuery}\"');
   }
 
   useEffect(() => {
